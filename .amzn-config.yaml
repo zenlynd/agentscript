@@ -1,0 +1,29 @@
+# Amazon Price Monitor Configuration
+products:
+  - url: "https://www.amazon.com/gp/product/B08ZL6XD9H"
+    asin: "B08ZL6XD9H"
+    name: "ZOTAC RTX 3090 Trinity OC"
+    check_interval_minutes: 15  # Check every 15 minutes
+
+  - url: "https://www.amazon.com/gp/product/B0CJQH8519"
+    asin: "B0CJQH8519"
+    name: "PNY RTX 4500 Ada Gen"
+    check_interval_minutes: 15
+
+  - url: "https://www.amazon.com/gp/product/B0CXPZSWPX"
+    asin: "B0CXPZSWPX"
+    name: "PNY Quadro RTX 5000"
+    check_interval_minutes: 15
+
+  - url: "https://www.amazon.com/dp/B0DT6Q3BXM"
+    asin: "B0DT6Q3BXM"
+    name: "MSI RTX 5090 GAMING TRIO OC"
+    check_interval_minutes: 15
+
+# Logging
+log_dir: "~/.hermes/logs"
+log_file: "amzn_price_history.json"
+
+# Alerting
+alert_on_change: true
+alert_threshold_percent: 5  # Alert if price changes by 5% or more
